@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 11:42:40 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 13:25:01 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/16 19:10:27 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,38 +27,36 @@ static int	ft_len(int n)
 	return (i);
 }
 
+static void	ft_fill_nmbrs(int len, int position, int n, char *str)
+{
+	while (len > position)
+	{
+		str[len - 1] = n % 10 + '0';
+		n = n / 10;
+		len--;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	int		len;
-	int		front;
-	int		back;
+	int		position;
 	char	*str;
 
-	front = 0;
+	position = 0;
 	len = ft_len(n);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (0);
 	if (n == -2147483648)
-	{
-		str[0] = '-';
-		str[1] = '2';
-		n = 147483648;
-		front = 2;
-	}
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
-		str[0] = '-';
+		str[position] = '-';
 		n = -n;
-		front = 1;
+		position++;
 	}
-	back = len - 1;
-	while (back > front)
-	{
-		str[back] = n % 10 + '0';
-		n = n / 10;
-		back--;
-	}
+	ft_fill_nmbrs(len, position, n, str);
 	str[len] = '\0';
 	return (str);
 }

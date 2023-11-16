@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:29:28 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/10 12:46:56 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:05:53 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	while (n > 0)
 	{
-		d[n] = s[n];
 		n--;
+		d[n] = s[n];
 	}
 	return (dest);
 }
