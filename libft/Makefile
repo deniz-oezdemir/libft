@@ -6,7 +6,7 @@
 #    By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 16:01:54 by denizozd          #+#    #+#              #
-#    Updated: 2023/11/16 16:30:11 by denizozd         ###   ########.fr        #
+#    Updated: 2023/11/16 17:02:36 by denizozd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,6 @@ clean:
 	rm -rf ${OBJS}
 
 fclean:	clean
-	rm -f${NAME}
+	rm -f ${NAME}
 
 re:	fclean all

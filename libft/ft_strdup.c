@@ -6,9 +6,11 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:04:38 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/13 17:19:18 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/16 16:52:54 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strdup(const char *s)
 {
