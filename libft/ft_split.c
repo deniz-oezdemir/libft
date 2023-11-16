@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:18:54 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 11:31:06 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:26:26 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	ft_create_substrs(char	**arr_strs, char const *s, char c)
 	}
 	*arr_strs = NULL;
 }
-	
+
 static int	ft_count_words(char const *s, char sep)
 {
 	int	count;
@@ -55,6 +55,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**arr_strs;
 	int		word_count;
+
 	if (!s)
 		return (NULL);
 	word_count = ft_count_words(s, c);
@@ -63,4 +64,4 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	ft_create_substrs(arr_strs, s, c);
 	return (arr_strs);
-}	
+}
