@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:34:52 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 16:50:38 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:06:44 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,13 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-/*	Bonus functions	*/
+/*	Bonus part	*/
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+t_list	*ft_lstnew(void *content);
 
 #endif
