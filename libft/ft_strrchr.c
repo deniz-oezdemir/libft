@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:02:56 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 17:00:46 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/18 13:45:37 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*ptr;
+	size_t	i;
+	char	f;
 
-	ptr = NULL;
-	while (*s)
+	f = (char) c;
+	i = 0;
+	while (s[i])
+		i++;
+	if (f == '\0')
+		return ((char *) &s[i]);
+	while (i > 0)
 	{
-		if (*s == (char)c)
-			ptr = (char *)s;
-		s++;
+		i--;
+		if (s[i] == f)
+			return ((char *) &s[i]);
 	}
-	if (c == 0)
-		return ((char *)s);
-	return (ptr);
+	return (NULL);
 }
