@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 11:42:40 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 19:10:27 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/19 20:16:26 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,10 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (0);
 	if (n == -2147483648)
+	{
+		free(str);
 		return (ft_strdup("-2147483648"));
+	}
 	if (n < 0)
 	{
 		str[position] = '-';
