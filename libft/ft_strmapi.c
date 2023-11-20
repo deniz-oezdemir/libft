@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 12:50:27 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 13:15:45 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:39:22 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+/* applies function f to every character of the string s */
+/* passes the index of the character and the character to f */
+/* result of the function f is placed in the new string at index i */
+/* returns new string */
