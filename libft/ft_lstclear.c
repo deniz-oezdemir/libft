@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:54:55 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/20 12:54:54 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:42:42 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	free(*lst);
 	*lst = NULL;
 }
+/* remove element passed as parameter and all following elements */

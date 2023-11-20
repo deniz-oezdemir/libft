@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 13:49:15 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/17 13:51:17 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:44:52 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,5 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
+/* allocates memory for new node of type t_list */
+/* sets its content to parameter content and next to NULL */

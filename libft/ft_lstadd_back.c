@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 17:22:58 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/17 19:41:06 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 23:11:49 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		last->next = new;
 }
+/* adds a new element to the end of exisiting list */
+/* if last is NULL, there is no exisiting list: set pointer to new element */
+/* else set last's next variable to point to new element */
