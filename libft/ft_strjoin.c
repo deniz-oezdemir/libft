@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:56:11 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 13:23:12 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:02:41 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(dst, s2, len1 + len2 + 1);
 	return (dst);
 }
+/* joins s1 and s2 in a newly allocated string */

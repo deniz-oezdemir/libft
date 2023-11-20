@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 18:18:58 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/20 13:18:37 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:06:08 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 
 	if (!lst || !f || !del)
-		return ;
+		return (0);
 	new = NULL;
 	while (lst)
 	{

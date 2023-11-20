@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 17:08:23 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/09 18:53:01 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:36:16 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,4 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/* writes n bytes of value c (converted to char) to string s */

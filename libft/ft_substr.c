@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:21:47 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/13 18:46:41 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:19:57 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }
+/* returns a substring of at most len length that starts at start of string s */

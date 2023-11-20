@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:29:28 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/16 18:05:53 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:36:42 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/* copies n bytes from string src to string dest */
+/* copying is non-destructive (compare memcpy) */
+/* caution: n-- before copying in while loop */

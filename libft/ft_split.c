@@ -6,33 +6,11 @@
 /*   By: denizozd <denizozd@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:18:54 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/19 20:35:19 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:24:31 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	ft_create_substrs(char	**arr_strs, char const *s, char c)
-{
-	char const	*tmp;
-
-	tmp = s;
-	while (*tmp)
-	{
-		while (*s == c)
-			s++;
-		tmp = s;
-		while (*tmp && *tmp != c)
-			tmp++;
-		if (*tmp == c || tmp > s)
-		{
-			*arr_strs = ft_substr(s, 0, tmp - s);
-			s = tmp;
-			arr_strs++;
-		}
-	}
-	*arr_strs = NULL;
-}
 
 static int	ft_count_words(char const *s, char sep)
 {
@@ -54,14 +32,28 @@ static int	ft_count_words(char const *s, char sep)
 char	**ft_split(char const *s, char c)
 {
 	char	**arr_strs;
-	int		word_count;
+	size_t	word_len;
+	int		i;
 
-	if (!s)
-		return (NULL);
-	word_count = ft_count_words(s, c);
-	arr_strs = (char **)malloc(sizeof(char *) * (word_count + 1));
-	if (!arr_strs)
-		return (NULL);
-	ft_create_substrs(arr_strs, s, c);
+	arr_strs = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !arr_strs)
+		return (0);
+	i = 0;
+	while (*s)
+	{
+		while (*s == c && *s)
+			s++;
+		if (*s)
+		{
+			if (!ft_strchr(s, c))
+				word_len = ft_strlen(s);
+			else
+				word_len = ft_strchr(s, c) - s;
+			arr_strs[i] = ft_substr(s, 0, word_len);
+			i++;
+			s = s + word_len;
+		}
+	}
+	arr_strs[i] = NULL;
 	return (arr_strs);
 }

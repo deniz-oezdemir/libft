@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 17:53:49 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/17 12:26:37 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:07:14 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed = ft_substr(s1, start, end - start + 1);
 	return (trimmed);
 }
+/* trims characters in set off of the beginning and end of s1 */

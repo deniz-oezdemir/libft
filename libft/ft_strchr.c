@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:16:43 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/17 19:22:38 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 19:20:43 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,4 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
+/* returns pointer to first occurrence of c in str, or NULL if c not found */

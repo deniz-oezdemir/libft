@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 11:07:15 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/10 12:08:17 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 15:35:35 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/* copies maximum n bytes from src to dest */
+/* works like strcpy, but takes void * as parameter, i.e. any type of pointer */
+/* caution: undefined behavior if src and dest overlap (use memove instead) */

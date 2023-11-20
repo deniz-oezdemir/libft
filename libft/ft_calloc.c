@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:49:04 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/13 17:02:40 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:08:58 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
+/* allocates memory like malloc but sets all memory bytes to 0 */
