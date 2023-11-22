@@ -6,10 +6,11 @@
 #    By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 16:01:54 by denizozd          #+#    #+#              #
-#    Updated: 2023/11/17 18:35:29 by denizozd         ###   ########.fr        #
+#    Updated: 2023/11/22 22:35:43 by denizozd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+#	Variables	#
 NAME = libft.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
@@ -27,6 +28,7 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 HEADER = libfth.h
 
+#	Targets		#
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -38,7 +40,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 	ar rc $(NAME) $(OBJS) $(BONUS_OBJS) 
 
 clean:
-	rm -rf ${OBJS}
+	rm -rf ${OBJS} ${BONUS_OBJS}
 
 fclean:	clean
 	rm -f ${NAME}
