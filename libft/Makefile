@@ -6,7 +6,7 @@
 #    By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 16:01:54 by denizozd          #+#    #+#              #
-#    Updated: 2023/11/22 22:35:43 by denizozd         ###   ########.fr        #
+#    Updated: 2023/11/23 20:20:54 by denizozd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,3 +46,5 @@ fclean:	clean
 	rm -f ${NAME}
 
 re:	fclean all
+
+.PHONY: all bonus clean fclean re
