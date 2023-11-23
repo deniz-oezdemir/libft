@@ -2,9 +2,16 @@
 do NOT submit this file!
 */
 
-#include "libft.h"
 #include <stdio.h>
 
+char to_uppercase(unsigned int index, char c)
+	{
+		if (c >= 'a' && c <= 'z')
+			return c - 'a' + 'A';
+		return c;
+	}
+
+#include "libft.h"
 int	main()
 {
 	printf("1: u is printable: %d\n", ft_isprint('u'));
@@ -74,16 +81,10 @@ int	main()
 	printf("7: %s", ft_itoa(-69420));
 	printf("\n");
 
-
-	const char *lower = "lets capitalize me";
-	char to_uppercase(unsigned int index, char c)
-	{
-		if (c >= 'a' && c <= 'z')
-			return c - 'a' + 'A';
-		return c;
-	}
-	char *upper = ft_strmapi(lower, to_uppercase);
+	char *lower = "lets capitalize me";
 	printf("8.1: Original string: %s\n", lower);
+	char *upper;
+	upper = ft_strmapi(lower, &to_uppercase);
 	printf("8:2: String after applying function: %s\n", upper);
 	free(upper);
 
