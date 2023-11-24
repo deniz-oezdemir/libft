@@ -1,1 +1,1 @@
-# 42-common-core
+# 42-libft
