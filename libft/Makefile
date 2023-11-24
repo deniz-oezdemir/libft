@@ -6,7 +6,7 @@
 #    By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 16:01:54 by denizozd          #+#    #+#              #
-#    Updated: 2023/11/23 20:20:54 by denizozd         ###   ########.fr        #
+#    Updated: 2023/11/24 22:52:30 by denizozd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,6 @@ BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_b
 
 OBJS = ${SRCS:.c=.o}
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
-
-HEADER = libfth.h
 
 #	Targets		#
 all: $(NAME)
