@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 18:18:58 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/20 23:55:43 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/24 11:30:28 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,33 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new;
-	t_list	*tmp;
+	t_list	*new_lst;
+	t_list	*new_elem;
+	void	*tmp;
 
 	if (!lst || !f || !del)
 		return (0);
-	new = NULL;
+	new_lst = NULL;
 	while (lst)
 	{
-		tmp = ft_lstnew(f(lst->content));
-		if (!tmp)
+		tmp = f(lst->content);
+		new_elem = ft_lstnew(tmp);
+		if (!new_elem)
 		{
-			ft_lstclear(&new, del);
+			del(tmp);
+			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, tmp);
+		ft_lstadd_back(&new_lst, new_elem);
 		lst = lst->next;
 	}
-	return (new);
+	return (new_lst);
 }
+
 /* create new list via application of f on each node's content: */
 /* loop over existing list */
-/* create tmp with content created via applying f on existing content */
-	/* if tmp is NULL, clear new list */
-/* add tmp to back of new list */
+	/* create tmp via applying f on existing content */
+	/* create list element with tmp as content */
+	/* if creation of new element unsuccesful: free tmp and new list */
+/* add new element to back of new list */
 /* return new list */
