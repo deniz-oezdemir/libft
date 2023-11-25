@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:18:54 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/23 18:51:26 by denizozd         ###   ########.fr       */
+/*   Updated: 2023/11/25 01:20:01 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	**split(char const *s, char c, char **arr_strs, size_t i)
 
 	while (*s)
 	{
-		while (*s == c) 
+		while (*s == c)
 			s++;
 		if (*s)
 		{
