@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   print_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: denizozd <denizozd@student.42.fr>          +#+  +:+       +#+        */
+/*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 16:16:43 by denizozd          #+#    #+#             */
-/*   Updated: 2024/02/11 18:24:43 by denizozd         ###   ########.fr       */
+/*   Created: 2023/11/24 12:27:00 by denizozd          #+#    #+#             */
+/*   Updated: 2023/11/25 22:52:43 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	print_char(char c)
 {
-	if (s == NULL)
-		return (NULL);
-	while (*s != (unsigned char)c)
-	{
-		if (*s == 0)
-			return (NULL);
-		s++;
-	}
-	return ((char *)s);
+	ft_putchar_fd(c, 1);
+	return (1);
 }
-/* returns pointer to first occurrence of c in str, or NULL if c not found */

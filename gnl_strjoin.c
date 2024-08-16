@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   gnl_strjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: denizozd <denizozd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 17:04:38 by denizozd          #+#    #+#             */
-/*   Updated: 2024/02/11 18:25:13 by denizozd         ###   ########.fr       */
+/*   Created: 2024/02/11 18:32:27 by denizozd          #+#    #+#             */
+/*   Updated: 2024/02/11 18:42:19 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+/*	frees input string (difference to ft_strjoin)	*/
+char	*gnl_strjoin(char *s1, char const *s2)
 {
 	char	*dst;
-	size_t	l;
-	size_t	i;
+	size_t	len1;
+	size_t	len2;
 
-	if (!s || !*s)
+	if (!s1 && !s2)
 		return (NULL);
-	l = ft_strlen(s);
-	dst = (char *)(malloc((l + 1) * sizeof(char)));
-	if (dst == NULL)
-		return (NULL);
-	i = 0;
-	while (i < l)
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	dst = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (!dst)
 	{
-		dst[i] = s[i];
-		i++;
+		if (s1)
+			free(s1);
+		return (NULL);
 	}
-	dst[l] = '\0';
+	dst[len1 + len2] = '\0';
+	while (len2--)
+		dst[len1 + len2] = s2[len2];
+	while (len1--)
+		dst[len1] = s1[len1];
+	if (s1)
+		free(s1);
 	return (dst);
 }

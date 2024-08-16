@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: denizozd <denizozd@student.42berlin.d      +#+  +:+       +#+        */
+/*   By: denizozd <denizozd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:34:52 by denizozd          #+#    #+#             */
-/*   Updated: 2023/11/22 22:15:50 by denizozd         ###   ########.fr       */
+/*   Updated: 2024/05/07 11:35:15 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+# include <stdarg.h>
+# include <limits.h>
+# include <fcntl.h>
 
 /*	Libc functions	*/
 int		ft_isalpha(int c);
@@ -46,6 +49,7 @@ char	*ft_strdup(const char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+int		ft_count_words(char const *s, char sep);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -71,4 +75,27 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/*	ft_printf	*/
+int		ft_printf(const char *input, ...);
+int		print_char(char c);
+int		print_str(char *s);
+int		print_ptr(unsigned long p);
+int		print_int(int n);
+int		print_uns(unsigned int n);
+int		print_hex(unsigned int n, int format);
+
+/*	Push_swap	*/
+void	ft_error(void);
+
+/*	get_next_line	*/
+char	*get_next_line(int fd);
+char	*read_buffer(char *line, int fd);
+char	*extract_excess(char *line);
+char	*gnl_strjoin(char *s1, char const *s2);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
 #endif
